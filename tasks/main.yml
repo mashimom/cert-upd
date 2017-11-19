@@ -1,0 +1,13 @@
+---
+# tasks file for cert-upd
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    install_recommends: yes
+    update_cache: yes
+    cache_valid_time: 3600
+    autoclean: yes
+    autoremove: yes
+  with_items:
+    - ca-certificates
+  become: yes

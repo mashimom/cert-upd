@@ -1,0 +1,5 @@
+[all]
+cert-upd ansible_connection=docker
+
+[group1]
+cert-upd
